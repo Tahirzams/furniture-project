@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif
+}
+body{
+    background-color: rgb(217, 221, 221);
+    overflow-x: hidden;
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(45, 87, 90, 0.877);
+    height: 9vh;
+    width: 100vw;
+    z-index: 10;
+    
+}
+.sidebtn{
+    position: absolute;
+    left: 10px;
+}
+.logohd{
+    font-size: 50px;
+}
+
+.shopping-icon{
+    position: relative;
+
+}
+.shopping-icon i{
+    /* position: absolute; */
+    font-size: 38px;
+    color: rgb(219, 204, 204);
+}
+.shopping-icon p{
+    position: absolute;
+    top: -17px;
+    left: 29px;
+    font-size: 25px;
+    background-color: orangered;
+    padding: 3px;
+    border-radius: 10px;
+
+}
+
+/* ---------end of header--------- */
+
+/* ---------start of frontpage------- */
+
+.frontpage{
+    height: 100vh;
+    background-image: url("images/product-7.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-color: black;
+    
+}
+.stylefrontpage{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 45vh;
+}
+.opcity{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.513);
+    
+}
+.logo{
+    font-size: 70px;
+    margin: 30px;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-shadow: 4px 8px 3px black;
+    background-color: rgba(22, 21, 21, 0.089);
+
+}
+.btnmain{
+    font-size: 40px;
+    outline: none;
+    border: none;
+    background-color: rgb(156, 68, 238);
+    padding: 10px;
+    border-radius: 2px;
+}
+
+/* ------ start of front page ------ */
+.productsmain{
+
+     position: relative;
+     top: 10vh;
+     
+ 
+
+}
+.productsmain h2{
+   
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 12vh;
+    color: rgb(112, 134, 141);
+    text-shadow: 2px 2px 17px rgb(0, 0, 0);
+}
+.productsdiv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px ,1fr));
+   
+    text-align: center;
+ 
+}
+.product{
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.image{
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+ 
+}
+.product img{
+   width: 300px;
+   height: 300px;
+}
+.add-to-cart{
+    position: relative;
+    top: -90px;
+    right: -80%;
+    background-color: rgba(255, 68, 0, 0.452) ;
+    padding: 10px;
+    font-size: 26px;
+    outline: none;
+    border: none;
+   z-index: 5;
+    transition: 1.3s;
+    
+}
+.image:hover > .add-to-cart {
+    background-color: rgba(255, 68, 0, 0.959);
+    transform: translateX(-200px);
+    transition: 1s;
+}
+.title{
+    font-size: 30px;
+    color: rgb(112, 134, 141);
+    padding: 5px;
+
+}
+.price{
+     font-size: 25px;
+    color: rgb(112, 134, 141);
+}
+/*------ end of front page------------ */
+
+/* ----- start of  cart ----------- */
+
+.cartmain{
+
+    top: 0px;
+    right: 0px;
+    background-color: rgba(106, 107, 65, 0.459);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+
+}
+.cartoverly{
+    background-color: rgb(141, 139, 118);
+    position: absolute;
+    right: 0px;
+    top: 9vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 91%;
+    align-items: center;
+}
+.hidecart{
+    visibility: hidden;
+    transition: 0.10s linear;
+    }
+.exit-btn{
+position: absolute;
+left: 0px;
+color: red;
+font-size: 20px;
+font-weight: bolder;
+padding: 1px 2px;
+
+}
+.exit-btn:hover{
+    transform: scale(1.4);
+    left: 3px;
+    top: 3px;
+  color: rgb(247, 74, 74);
+
+}
+.cartoverly h1{
+    padding: 10px 0px;
+    
+}
+.cartproduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: turquoise;
+    padding: 5px;
+    width: 100%;
+
+}
+.productdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background-color: lawngreen;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3px;
+    position: relative;
+}
+.productdiv .image{
+    width: 140px;
+    height: 120px;
+    border-radius: 6px;
+
+}
+.itemtitle{
+    font-size: 21px;
+    width: 30%;
+  
+    overflow: hidden;
+    text-align: center;
+    background-color: lightblue;
+    margin: 5px;
+
+}
+.itemprice{
+  font-size: 20px;
+  background-color: khaki;
+  margin-bottom: 18px;
+}
+.threebtn{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+height: 90px;
+font-size: 15px;
+color: rgb(40, 46, 46);
+padding-right: 8px;
+
+}
+.itemcount{
+    font-size: 22px;
+}
+.fa-chevron-up:hover{
+    transform: scale(1.5);
+
+}
+
+.fa-chevron-down:hover{
+    transform: scale(1.5);
+
+}
+
+
+.itemremove{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+
+    background-color: #ff0d35c0;
+    padding: 1px 8px;
+    border-radius: 10px;
+
+}
+.itemremove:hover{
+    transform: scale(1.2);
+    background-color: rgb(247, 23, 23);
+}
+.cartfooter{
+padding: 70px 0px;
+
+}
+.total{
+
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+
+}
+.cartclear{
+  background-color: tomato;
+  padding: 20px;
+  font-size: 30px;
+  box-shadow: 0px 0px 7px 0.2px black;
+}
+
+/*   products
+
+`
+         <div class="product">
+         <div class="image">
+         <img class='image' src='${item.image}' alt='products'>
+         <button class="add-to-cart" data-id=${item.id}>
+         <i class="fas fa-shopping-cart editbtn"> </i>
+                        add to bag </button>
+         </div>
+        <div class='title'>${item.title}</div>
+        <div class='price'>${item.price}</div>
+      
+         </div>
+          `
+
+*/
+
+/*  cart items
+
+`
+          <div class='productdiv'>
+         <img class='image' src='${cart.image}'>
+         <div class='cartitem'>${cart.title}</div>
+         <div class='cartprice'>${cart.price}</div>
+         <div class='itemremove' id =${cart.id}>remove</div>
+         <div class='threebtn'>
+         <i class="fas fa-chevron-up" data-id = ${cart.id}></i>
+        <p class="item-amount">${cart.amount}</p>
+        <i class="fas fa-chevron-down" data-id = ${cart.id}></i>
+         </div>
+         </div
+
+*/
