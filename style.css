@@ -57,6 +57,14 @@ font-size: 30px;
 /* ---------------  end of  nav bar --------- */
 
 /* ------------------- hero --------------- */
+.frontpage{
+    height: 100vh;
+    background-image: url("images/product-7.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-color: black;
+    
+}
 .hero{
     width: 100vw;
     height: 70vh;
